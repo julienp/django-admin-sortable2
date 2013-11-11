@@ -146,7 +146,7 @@ class SortableAdminMixin(SortableAdminBase):
             move_update = { self.default_order_field: F(self.default_order_field) + 1 }
         else:
             return self.model.objects.none()
-        with transaction.commit_on_success():
+        with transaction.atomic():
             obj = self.model.objects.get(**{ self.default_order_field: startorder })
             setattr(obj, self.default_order_field, self.get_max_order() + 1)
             obj.save()
