@@ -27,6 +27,8 @@ class SortableAdminBase(object):
             'adminsortable/js/plugins/admincompat.js',
             'adminsortable/js/libs/jquery.query.js',
             'adminsortable/js/libs/jquery.ui.core.js',
+            'adminsortable/js/libs/jquery.ui.widget.js',
+            'adminsortable/js/libs/jquery.ui.mouse.js',
             'adminsortable/js/libs/jquery.ui.sortable.js',
         ))
 
